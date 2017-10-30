@@ -12,52 +12,52 @@ var Stats = function () {
 	var container = document.createElement( 'div' );
 	container.id = 'stats';
 	container.addEventListener( 'mousedown', function ( event ) { event.preventDefault(); setMode( ++ mode % 2 ) }, false );
-	container.style.cssText = 'width:80px;opacity:0.9;cursor:pointer';
+	container.styleParticles.cssText = 'width:80px;opacity:0.9;cursor:pointer';
 
 	var fpsDiv = document.createElement( 'div' );
 	fpsDiv.id = 'fps';
-	fpsDiv.style.cssText = 'padding:0 0 3px 3px;text-align:left;background-color:#002';
+	fpsDiv.styleParticles.cssText = 'padding:0 0 3px 3px;text-align:left;background-color:#002';
 	container.appendChild( fpsDiv );
 
 	var fpsText = document.createElement( 'div' );
 	fpsText.id = 'fpsText';
-	fpsText.style.cssText = 'color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px';
+	fpsText.styleParticles.cssText = 'color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px';
 	fpsText.innerHTML = 'FPS';
 	fpsDiv.appendChild( fpsText );
 
 	var fpsGraph = document.createElement( 'div' );
 	fpsGraph.id = 'fpsGraph';
-	fpsGraph.style.cssText = 'position:relative;width:74px;height:30px;background-color:#0ff';
+	fpsGraph.styleParticles.cssText = 'position:relative;width:74px;height:30px;background-color:#0ff';
 	fpsDiv.appendChild( fpsGraph );
 
 	while ( fpsGraph.children.length < 74 ) {
 
 		var bar = document.createElement( 'span' );
-		bar.style.cssText = 'width:1px;height:30px;float:left;background-color:#113';
+		bar.styleParticles.cssText = 'width:1px;height:30px;float:left;background-color:#113';
 		fpsGraph.appendChild( bar );
 
 	}
 
 	var msDiv = document.createElement( 'div' );
 	msDiv.id = 'ms';
-	msDiv.style.cssText = 'padding:0 0 3px 3px;text-align:left;background-color:#020;display:none';
+	msDiv.styleParticles.cssText = 'padding:0 0 3px 3px;text-align:left;background-color:#020;display:none';
 	container.appendChild( msDiv );
 
 	var msText = document.createElement( 'div' );
 	msText.id = 'msText';
-	msText.style.cssText = 'color:#0f0;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px';
+	msText.styleParticles.cssText = 'color:#0f0;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px';
 	msText.innerHTML = 'MS';
 	msDiv.appendChild( msText );
 
 	var msGraph = document.createElement( 'div' );
 	msGraph.id = 'msGraph';
-	msGraph.style.cssText = 'position:relative;width:74px;height:30px;background-color:#0f0';
+	msGraph.styleParticles.cssText = 'position:relative;width:74px;height:30px;background-color:#0f0';
 	msDiv.appendChild( msGraph );
 
 	while ( msGraph.children.length < 74 ) {
 
 		var bar = document.createElement( 'span' );
-		bar.style.cssText = 'width:1px;height:30px;float:left;background-color:#131';
+		bar.styleParticles.cssText = 'width:1px;height:30px;float:left;background-color:#131';
 		msGraph.appendChild( bar );
 
 	}
